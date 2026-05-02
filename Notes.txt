@@ -1,0 +1,40 @@
+1st prompt -- generate a playwright python test case for the given sceanrio in
+"tests" directory : scenario : navigate to www.bing.com verify the title of
+the web page "Search - Microsoft Bing" give the sceanrio as test case name
+ , i don't want any understanding document to be created
+ , just create a program for me
+
+
+2nd prompt -- generate a playwright python test case for the given sceanrio in
+ "tests" directory : scenario : navigate to https://www.saucedemo.com
+ enter username as "standard_user" and password as "secret_sauce"
+ and click on login button validate the home page url
+ "https://www.saucedemo.com/inventory.html " and
+ wait for 5 sec and then terminate the execution
+ ,i dont want any understanding document to be created , just create a program for me
+
+
+ 3rd prompt -- navigate to "https://www.bing.com/account/general?ru=" in the SafeSearch setting Strict
+ radio button , wait for 5 sec and then terminate the execution
+
+ 4th prompt -- navigate to https://the-internet.herokuapp.com/windows
+ click on  "Click Here" link to open a new window
+ switch to the new window and verify the title of the new window is "New Window"
+ wait for 5 sec and then terminate the execution
+
+
+
+i want to create framework for playwright using python
+1. i want below packages to be installed in my framework
+    a. pytest
+    b. pytest-html
+    c. pytest-xdist
+    d. allure-pytest
+    e. playwright
+
+2. with respective folder structure  as below
+   -pages --> in which define all the page locators and related methods using those locators
+   -tests --> in which define all the test cases using methods
+    -utils --> in which define reusable utilities if any
+    -reports --> in which all the test execution reports will be generated html
+    -pytest.ini -->to define pytest configurations for our framework

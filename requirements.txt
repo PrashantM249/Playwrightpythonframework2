@@ -1,0 +1,10 @@
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-xdist==3.5.0
+allure-pytest==2.13.2
+playwright==1.40.0
+pytest-base-url
+pytest-playwright
+Faker==18.3.0
+openpyxl
+pytest-rerunfailures
