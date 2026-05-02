@@ -38,3 +38,8 @@ i want to create framework for playwright using python
     -utils --> in which define reusable utilities if any
     -reports --> in which all the test execution reports will be generated html
     -pytest.ini -->to define pytest configurations for our framework
+
+git init
+git add -A
+git commit -m "Initial commit for Playwright Python framework with required packages and folder structure"
+git push -u origin main

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="/bing_account_page (snapshot).py">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/bing_account_page (snapshot).py" />
+              <option name="originalContent" value="from utils.base_page import Base_page&#10;import os&#10;&#10;&#10;class BingAccountPage(Base_page):&#10;    &quot;&quot;&quot;Page Object for Bing Account Settings Page&quot;&quot;&quot;&#10;&#10;    # Locators&#10;    BING_ACCOUNT_URL = &quot;https://www.bing.com/account/general?ru=&quot;&#10;    SAFESEARCH_STRICT_RADIO = 'input[value=&quot;strict&quot;]'&#10;&#10;    def navigate_to_bing_account(self):&#10;        &quot;&quot;&quot;Navigate to Bing account general settings page&quot;&quot;&quot;&#10;        self.navigate(self.BING_ACCOUNT_URL)&#10;        # Use shorter timeout for CI environments&#10;        timeout = 10000 if os.getenv(&quot;CI&quot;) or os.getenv(&quot;JENKINS_HOME&quot;) else 30000&#10;        self.wait_for_load_state(timeout=timeout)&#10;&#10;    def set_safesearch_strict(self):&#10;        &quot;&quot;&quot;Set SafeSearch to Strict by clicking the Strict radio button&quot;&quot;&quot;&#10;        self.wait_for_selector(self.SAFESEARCH_STRICT_RADIO)&#10;        self.click(self.SAFESEARCH_STRICT_RADIO)&#10;&#10;    def verify_safesearch_strict_selected(self):&#10;        &quot;&quot;&quot;Verify that Strict SafeSearch is selected&quot;&quot;&quot;&#10;        # Check if the radio button is checked&#10;        is_checked = self.page.is_checked(self.SAFESEARCH_STRICT_RADIO)&#10;        assert is_checked, &quot;SafeSearch Strict radio button is not selected&quot;&#10;        return True&#10;" />
+              <option name="updatedContent" value="from utils.base_page import BasePage&#10;import os&#10;&#10;&#10;class BingAccountPage(BasePage):&#10;    &quot;&quot;&quot;Page Object for Bing Account Settings Page&quot;&quot;&quot;&#10;&#10;    # Locators&#10;    BING_ACCOUNT_URL = &quot;https://www.bing.com/account/general?ru=&quot;&#10;    SAFESEARCH_STRICT_RADIO = 'input[value=&quot;strict&quot;]'&#10;&#10;    def navigate_to_bing_account(self):&#10;        &quot;&quot;&quot;Navigate to Bing account general settings page&quot;&quot;&quot;&#10;        self.navigate(self.BING_ACCOUNT_URL)&#10;        # Use shorter timeout for CI environments&#10;        timeout = 10000 if os.getenv(&quot;CI&quot;) or os.getenv(&quot;JENKINS_HOME&quot;) else 30000&#10;        self.wait_for_load_state(timeout=timeout)&#10;&#10;    def set_safesearch_strict(self):&#10;        &quot;&quot;&quot;Set SafeSearch to Strict by clicking the Strict radio button&quot;&quot;&quot;&#10;        self.wait_for_selector(self.SAFESEARCH_STRICT_RADIO)&#10;        self.click(self.SAFESEARCH_STRICT_RADIO)&#10;&#10;    def verify_safesearch_strict_selected(self):&#10;        &quot;&quot;&quot;Verify that Strict SafeSearch is selected&quot;&quot;&quot;&#10;        # Check if the radio button is checked&#10;        is_checked = self.page.is_checked(self.SAFESEARCH_STRICT_RADIO)&#10;        assert is_checked, &quot;SafeSearch Strict radio button is not selected&quot;&#10;        return True" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

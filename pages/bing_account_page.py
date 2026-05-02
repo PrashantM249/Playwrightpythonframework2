@@ -1,4 +1,5 @@
 from utils.base_page import BasePage
+import os
 
 
 class BingAccountPage(BasePage):
@@ -11,7 +12,9 @@ class BingAccountPage(BasePage):
     def navigate_to_bing_account(self):
         """Navigate to Bing account general settings page"""
         self.navigate(self.BING_ACCOUNT_URL)
-        self.wait_for_load_state()
+        # Use shorter timeout for CI environments
+        timeout = 10000 if os.getenv("CI") or os.getenv("JENKINS_HOME") else 30000
+        self.wait_for_load_state(timeout=timeout)
 
     def set_safesearch_strict(self):
         """Set SafeSearch to Strict by clicking the Strict radio button"""
