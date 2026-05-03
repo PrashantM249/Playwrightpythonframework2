@@ -28,9 +28,9 @@ class BasePage:
         """Get the current page URL"""
         return self.page.url
 
-    def wait_for_load_state(self, state: str = "networkidle", timeout: int = 30000):
+    def wait_for_load_state(self, state: str = "networkidle"):
         """Wait for page to load"""
-        self.page.wait_for_load_state(state, timeout=timeout)
+        self.page.wait_for_load_state(state)
 
     def wait_for_selector(self, selector: str, timeout: int = 5000):
         """Wait for a selector to appear"""
