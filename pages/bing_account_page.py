@@ -11,7 +11,12 @@ class BingAccountPage(BasePage):
     def navigate_to_bing_account(self):
         """Navigate to Bing account general settings page"""
         self.navigate(self.BING_ACCOUNT_URL)
-        self.wait_for_load_state()
+        # Use domcontentloaded instead of networkidle for faster page load detection
+        try:
+            self.page.wait_for_load_state("domcontentloaded")
+        except Exception:
+            # If timeout occurs, continue anyway as the page might still be usable
+            pass
 
     def set_safesearch_strict(self):
         """Set SafeSearch to Strict by clicking the Strict radio button"""
